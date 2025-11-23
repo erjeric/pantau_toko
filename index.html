@@ -46,45 +46,13 @@
                 <img src="./demo/brand/tabler.svg" class="header-brand-img" alt="tabler logo">
               </a>
               <div class="d-flex order-lg-2 ml-auto">
-                <div class="nav-item d-none d-md-flex">
-                  <a href="https://github.com/tabler/tabler" class="btn btn-sm btn-outline-primary" target="_blank">Source code</a>
-                </div>
-                <div class="dropdown d-none d-md-flex">
-                  <a class="nav-link icon" data-toggle="dropdown">
-                    <i class="fe fe-bell"></i>
-                    <span class="nav-unread"></span>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a href="#" class="dropdown-item d-flex">
-                      <span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/male/41.jpg)"></span>
-                      <div>
-                        <strong>Nathan</strong> pushed new commit: Fix page load performance issue.
-                        <div class="small text-muted">10 minutes ago</div>
-                      </div>
-                    </a>
-                    <a href="#" class="dropdown-item d-flex">
-                      <span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/female/1.jpg)"></span>
-                      <div>
-                        <strong>Alice</strong> started new task: Tabler UI design.
-                        <div class="small text-muted">1 hour ago</div>
-                      </div>
-                    </a>
-                    <a href="#" class="dropdown-item d-flex">
-                      <span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/female/18.jpg)"></span>
-                      <div>
-                        <strong>Rose</strong> deployed new version of NodeJS REST Api V3
-                        <div class="small text-muted">2 hours ago</div>
-                      </div>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item text-center text-muted-dark">Mark all as read</a>
-                  </div>
-                </div>
+               
+                
                 <div class="dropdown">
                   <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                     <span class="avatar" style="background-image: url(./demo/faces/female/25.jpg)"></span>
                     <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Jane Pearson</span>
+                      <span class="text-default">Bu ana</span>
                       <small class="text-muted d-block mt-1">Administrator</small>
                     </span>
                   </a>
@@ -192,63 +160,171 @@
                         </div>
                       </div>
                     </div>
+                    
+
+                    
+                    <div class="card">
+                      <div class="card mb-3">
+                        <div class="card-body d-flex gap-3 align-items-end">
+                        <div class="col-3">
+                        <label class="form-label">Bulan</label>
+                        <select class="form-select">
+                        <option>Januari</option>
+                        <option>Februari</option>
+                        <option>Maret</option>
+                        <option>April</option>
+                        </select>
+                        </div>
+                        <div class="col-2">
+                        <label class="form-label">Tahun</label>
+                        <select class="form-select">
+                        <option>2025</option>
+                        <option>2024</option>
+                        </select>
+                        </div>
+                        <div class="ms-auto">
+                        <button class="btn btn-primary">Filter</button>
+                        </div>
+                        </div>
+                        </div>
+
+                   <!-- TABEL PENGELUARAN -->
+                   <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="card-title">Daftar Pengeluaran</h3>
+                
+                    <div class="card-actions">
+                        <button id="add-expense-btn" class="btn btn-primary">
+                            + Tambah Pengeluaran
+                        </button>
+                    </div>
+                </div>
+                
+                
+                    <div class="table-responsive">
+                      <table class="table card-table table-vcenter text-nowrap">
+                        <thead>
+                        <tr>
+                        <th class="w-1">No.</th>
+                        <th>Jenis Pengeluaran</th>
+                        <th>Harga</th>
+                        <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <td><span class="text-muted">1</span></td>
+                        <td>Gaji</td>
+                        <td>2.500.000</td>
+                        <td class="text-end"><a class="icon" href="#"><i class="ti ti-edit"></i></a></td>
+                        </tr>
+                        <tr>
+                        <td><span class="text-muted">2</span></td>
+                        <td>Listrik</td>
+                        <td>200.000</td>
+                        <td class="text-end"><a class="icon" href="#"><i class="ti ti-edit"></i></a></td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        </div>
+                        
+                        </div>
+                                  <!-- RINGKASAN TOTAL -->
+<div class="row row-deck">
+  <div class="col-md-4">
+  <div class="card">
+  <div class="card-body">
+  <h3 class="card-title">Total Pemasukan</h3>
+  <div class="summary-value text-success">Rp 3.000.000</div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="card">
+  <div class="card-body">
+  <h3 class="card-title">Total Pengeluaran</h3>
+  <div class="summary-value text-danger">Rp 2.700.000</div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4">
+  <div class="card">
+  <div class="card-body">
+  <h3 class="card-title">Saldo Akhir</h3>
+  <div class="summary-value text-success">+ Rp 300.000</div>
+  <div class="mt-2"><span class="badge bg-success">Toko Untung</span></div>
+  </div>
+  </div>
+  </div>
+  </div>
+                      </div>
+
+          
+  
+  
+  </div>
+  
+  
+  <!-- Modal (Tabler style) -->
+  <div class="modal modal-blur fade" id="modal-add" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+  <div class="modal-content">
+  <div class="modal-header">
+  <h5 class="modal-title">Tambah Pengeluaran</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+  <div class="mb-3">
+  <label class="form-label">Jenis Pengeluaran</label>
+  <input id="inp-jenis" type="text" class="form-control" placeholder="Mis. Listrik">
+  </div>
+  <div class="mb-3">
+  <label class="form-label">Harga</label>
+  <input id="inp-harga" type="number" class="form-control" placeholder="100000">
+  </div>
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-link link-secondary" data-bs-dismiss="modal">Batal</button>
+  <button id="save-expense" type="button" class="btn btn-primary">Simpan</button>
+  </div>
+  </div>
+  </div>
+  </div>
+  <script>
+    // Simple JS to open modal using Tabler's modal classes (no bootstrap dependency required here)
+    const addBtn = document.getElementById('add-expense-btn');
+    const modal = document.getElementById('modal-add');
+    const closeBtns = modal.querySelectorAll('[data-bs-dismiss]');
+    
+    
+    function openModal(){ modal.classList.add('show'); modal.style.display = 'block'; }
+    function closeModal(){ modal.classList.remove('show'); modal.style.display = 'none'; }
+    
+    
+    addBtn.addEventListener('click', openModal);
+    closeBtns.forEach(b => b.addEventListener('click', closeModal));
+    
+    
+    // (UI-only) Save btn just closes modal for now
+    document.getElementById('save-expense').addEventListener('click', ()=>{ closeModal(); });
+    </script>
+
+                  </div>
+                 
+                 
+                
+                </div>
+                
+                
                   </div>
                 </div>
               </div>
                         </div>
             
              
-                <div class="card">
-                  <div class="card-header">
-                    <h3 class="card-title">Akumulasi Pengeluaran dan pemasukan</h3>
-                  </div>
-                  <div class="table-responsive">
-                    <table class="table card-table table-vcenter text-nowrap">
-                      <thead>
-                        <tr>
-                          <th class="w-1">No.</th>
-                          <th>Jenis Pengeluaran</th>
-                          <th>Harga</th>
-                          
-                          <th></th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                       
-                        <tr>
-                          <td><span class="text-muted">1</span></td>
-                          <td>gaji</a></td>
-                          <td>
-                            2.500.000
-                          </td>
-                          
-                          <td>
-                            <a class="icon" href="javascript:void(0)">
-                              <i class="fe fe-edit"></i>
-                            </a>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td><span class="text-muted">1</span></td>
-                          <td>Listrik</a></td>
-                          <td>
-                            200.000
-                          </td>
-                          
-                          <td>
-                            <a class="icon" href="javascript:void(0)">
-                              <i class="fe fe-edit"></i>
-                            </a>
-                          </td>
-                        </tr>
-                       
-                       
-                        
-                      </tbody>
-                    </table>
-                  </div>
+               
+                 
+                  
+                  
                 </div>
               </div>
             </div>

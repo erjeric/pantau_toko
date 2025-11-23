@@ -46,66 +46,16 @@
                 <img src="./demo/brand/tabler.svg" class="header-brand-img" alt="tabler logo">
               </a>
               <div class="d-flex order-lg-2 ml-auto">
-                <div class="nav-item d-none d-md-flex">
-                  <a href="https://github.com/tabler/tabler" class="btn btn-sm btn-outline-primary" target="_blank">Source code</a>
-                </div>
-                <div class="dropdown d-none d-md-flex">
-                  <a class="nav-link icon" data-toggle="dropdown">
-                    <i class="fe fe-bell"></i>
-                    <span class="nav-unread"></span>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a href="#" class="dropdown-item d-flex">
-                      <span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/male/41.jpg)"></span>
-                      <div>
-                        <strong>Nathan</strong> pushed new commit: Fix page load performance issue.
-                        <div class="small text-muted">10 minutes ago</div>
-                      </div>
-                    </a>
-                    <a href="#" class="dropdown-item d-flex">
-                      <span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/female/1.jpg)"></span>
-                      <div>
-                        <strong>Alice</strong> started new task: Tabler UI design.
-                        <div class="small text-muted">1 hour ago</div>
-                      </div>
-                    </a>
-                    <a href="#" class="dropdown-item d-flex">
-                      <span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/female/18.jpg)"></span>
-                      <div>
-                        <strong>Rose</strong> deployed new version of NodeJS REST Api V3
-                        <div class="small text-muted">2 hours ago</div>
-                      </div>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item text-center text-muted-dark">Mark all as read</a>
-                  </div>
-                </div>
+               
                 <div class="dropdown">
                   <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                     <span class="avatar" style="background-image: url(./demo/faces/female/25.jpg)"></span>
                     <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Jane Pearson</span>
+                      <span class="text-default">Bu ana</span>
                       <small class="text-muted d-block mt-1">Administrator</small>
                     </span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-user"></i> Profile
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-settings"></i> Settings
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <span class="float-right"><span class="badge badge-primary">6</span></span>
-                      <i class="dropdown-icon fe fe-mail"></i> Inbox
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-send"></i> Message
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
-                      <i class="dropdown-icon fe fe-help-circle"></i> Need help?
-                    </a>
                     <a class="dropdown-item" href="#">
                       <i class="dropdown-icon fe fe-log-out"></i> Sign out
                     </a>
@@ -138,8 +88,8 @@
                   <li class="nav-item">
                     <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i> Cabang</a>
                     <div class="dropdown-menu dropdown-menu-arrow">
-                      <a href="./Depan.html" class="dropdown-item ">Depan</a>
-                      <a href="./Belakang.html" class="dropdown-item ">Belakang</a>
+                      <a href="./depan.html" class="dropdown-item ">Depan</a>
+                      <a href="./belakang.html" class="dropdown-item ">Belakang</a>
                     </div>
                   </li>
                 
@@ -155,7 +105,7 @@
           <div class="container">
             <div class="page-header">
               <h1 class="page-title">
-                 Toko depan
+                 Toko Depan
               </h1>
             </div>
           
@@ -167,7 +117,7 @@
               <div class="col-sm-6 col-lg-3">
                 <div class="card">
                   <div class="card-body">
-                    <h3 class="card-title">Total Penjuala1n</h3>
+                    <h3 class="card-title">Total Pemasukan</h3>
                     <div class="display-6 fw-bold" id="total_penjualan">Rp 0</div>
                   </div>
                 </div>
@@ -176,7 +126,7 @@
               <div class="col-sm-6 col-lg-3">
                 <div class="card">
                   <div class="card-body">
-                    <h3 class="card-title">Total Transaksi</h3>
+                    <h3 class="card-title">Total Pengeluaran</h3>
                     <div class="display-6 fw-bold" id="total_transaksi">0</div>
                   </div>
                 </div>
@@ -240,7 +190,7 @@
             <div class="row row-cards mt-3">
         
               <!-- STOK HAMPIR HABIS -->
-              <div class="col-lg-4">
+              <div class="col-lg-6">
                 <div class="card">
                   <div class="card-header">
                     <h3 class="card-title">Stok Hampir Habis</h3>
@@ -257,7 +207,7 @@
               </div>
         
               <!-- PEMBELIAN TERAKHIR -->
-              <div class="col-lg-4">
+              <div class="col-lg-6">
                 <div class="card">
                   <div class="card-header">
                     <h3 class="card-title">Pembelian Terakhir</h3>
@@ -272,20 +222,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4">
-                <div class="card">
-                  <div class="card-header">
-                    <h3 class="card-title">Notifikasi</h3>
-                  </div>
-                  <div class="card-body">
-                    <ul class="list-unstyled" id="list_notif">
-                      <li>⚠ Produk A kadaluarsa</li>
-                      <li>🔔 Hutang Supplier Y Rp 5.000</li>
-                      <li>📄 Kontrak Supplier Z segera habis</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              
           </div>
          
         </div>
