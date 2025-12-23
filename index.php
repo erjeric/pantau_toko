@@ -90,8 +90,8 @@
                   <li class="nav-item">
                     <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i> Cabang</a>
                     <div class="dropdown-menu dropdown-menu-arrow">
-                      <a href="./depan.html" class="dropdown-item ">Depan</a>
-                      <a href="./belakang.html" class="dropdown-item ">Belakang</a>
+                      <a href="./page/depan.html" class="dropdown-item ">Depan</a>
+                      <a href="./page/belakang.html" class="dropdown-item ">Belakang</a>
                     </div>
                   </li>
                 
@@ -100,6 +100,13 @@
             </div>
           </div>
         </div>
+        <?php
+       require_once 'config/db.php';
+       require_once 'lib/dashboard_sql.php';
+        $total = totalPendapatan($conn);
+$hariIni = pendapatanHariIni($conn);
+$mtd = totalTransaksiMTD($conn);
+?>
 
         <div class="my-3 my-md-5">
           <div class="container">
@@ -115,7 +122,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h3 class="card-title">Total Pemasukan Hari ini</h3>
-                    <div class="display-6 fw-bold" id="total_transaksi">RP 700.000</div>
+                    <div class="display-6 fw-bold" id="total_transaksi"><?= number_format($mtd) ?></div>
                   </div>
                 </div>
               </div>
@@ -134,7 +141,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h3 class="card-title">Potensi Pendapatan Hari ini</h3>
-                    <div class="display-6 fw-bold" id="total_transaksi">RP 200.000</div>
+                    <div class="display-6 fw-bold" id="total_transaksi"><?= number_format($hariIni) ?></div>
                   </div>
                 </div>
               </div>
